@@ -19,13 +19,24 @@ public class BalancedBrackets {
      * @param str - to be validated
      * @return true if balanced, false otherwise
      */
+    public static void main(String[] args) {
+        String str = "[LaunchCode]";
+
+    }
     public static boolean hasBalancedBrackets(String str) {
+        if(str.equals("")||str.equals("[]")){
+            return true;
+        }
         int brackets = 0;
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
                 brackets++;
+
             } else if (ch == ']') {
                 brackets--;
+            }
+            if(brackets<0){
+                return false;
             }
         }
         return brackets == 0;
