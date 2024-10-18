@@ -51,7 +51,7 @@ class BalancedBracketsTest {
     }
 
     @Test
-    public void returnsFalseForBackwardsBrackets() {
+    public void returnsFalseIfHasBackwardsBrackets() {
         assertEquals(false,BalancedBrackets.hasBalancedBrackets("]["));
     }
     @Test
